@@ -2,7 +2,7 @@ name: Deploy Python Function App to Azure
 
 env:
   AZURE_FUNCTIONAPP_NAME: claude-m365-backend
-  PYTHON_VERSION: '3.11'
+  PYTHON_VERSION: '3.13'
 
 on:
   push:
@@ -28,4 +28,3 @@ jobs:
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
           package: .
-          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
